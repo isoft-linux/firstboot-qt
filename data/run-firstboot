@@ -1,0 +1,26 @@
+#!/usr/bin/bash
+
+LIVECD=0
+FILE=/proc/cmdline
+
+while read LINE; do
+    RESULT=$(echo $LINE | grep "isoftiso")
+    if [[ ${RESULT} != "" ]]; then
+        LIVECD=1
+    fi
+done < ${FILE}
+
+if [ ${LIVECD} -eq 1 ]; then
+    exit 0
+fi
+
+exe=`which metacity 2>/dev/null || which marco 2>/dev/null || which kwin_x11 2>/dev/null`
+
+cat > /tmp/.firstboot-script <<EOF
+echo "use $exe !"
+$exe &
+exec /bin/firstboot-qt
+EOF
+
+startx /tmp/.firstboot-script --/usr/bin/X :0
+

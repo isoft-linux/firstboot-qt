@@ -1,0 +1,5 @@
+ 
+#define DATA_PATH "@DATA_PATH@"
+#define FACE_PATH "@FACE_PATH@users/faces/"
+#define XSESSION  "/usr/share/xsessions/"
+#define SDDM_CONF "/etc/sddm.conf"

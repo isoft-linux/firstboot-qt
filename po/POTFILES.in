@@ -1,0 +1,6 @@
+configdialog.cpp
+lang.cpp
+main.cpp
+timezone.cpp
+userinfo.cpp
+welcome.cpp

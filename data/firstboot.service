@@ -1,0 +1,12 @@
+[Unit]
+Description=first config system
+After=systemd-user-sessions.service 
+Before=display-manager.service 
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/run-firstboot
+ExecStartPost=/usr/bin/systemctl disable firstboot.service
+
+[Install]
+WantedBy=multi-user.target
