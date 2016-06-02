@@ -1,6 +1,6 @@
 firstboot-qt
 ------------
-[NOT](https://github.com/systemd/systemd/issues/3401) systemd-firstboot Qt frontend.
+[NOT](https://github.com/systemd/systemd/issues/3401) a systemd-firstboot Qt frontend.
 
 
 ## Build && Install
